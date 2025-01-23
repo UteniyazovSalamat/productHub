@@ -13,6 +13,7 @@ import { Product } from './types/types';
 function App() {
     const [items, setItems] = useState<Product[]>(JSON.parse(localStorage.getItem('items') ?? '') || products);
     const [isLightTheme, setIsLightTheme] = useState(updateThemeByTime());
+    console.log('Hello');
 
     useEffect(() => {
         localStorage.setItem('items', JSON.stringify(items));
