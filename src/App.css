@@ -1,14 +1,40 @@
+:root {
+    --theme-light: rgb(185 229 229 / 28%);
+    --theme-dark: #333;
+    --header-dark: #4c4b4b;
+    --white-color: #fff;
+    --black-color: #000;
+    --light-gray-color: #ddd;
+    --nav-link: #006080;
+    --ph-theme-btn: #006080;
+    --nav-link-dark: #8282a7;
+    --nav-link-active-light: #000e32;
+    --ph__cart-bg: #df0b0b;
+    --ph__cart-active-bg: #a30202;
+    --home-btn: #00806f;
+    --cart-btn-color: #df0b0b;
+    --cart-btn-active-color: #a30202;
+    --product-card-border: #ccc;
+    --product-price-bg: #4caf50;
+    --product-price-hover: #388e3c;
+    --table-header-bg: #a92323;
+    --cancel-btn-hover: #d32f2f;
+    --ct-header-bg: #a92323;
+    --cart-btn-bg: #2e7d32;
+    --cart-btn-hover: #1b5e20;
+}
+
 .ph {
     height: 100vh;
 }
 
 .ligth-theme {
-    background-color: rgb(185 229 229 / 28%);
+    background-color: var(--theme-ligth);
 }
 
 .dark-theme {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--theme-dark);
+    color: var(--white-color);
 }
 
 /* Header */
@@ -22,11 +48,11 @@
 }
 
 .ph-header-light {
-    background-color: #fff;
+    background-color: var(--white-color);
 }
 
 .ph-header-dark {
-    background-color: #4c4b4b;
+    background-color: var(--header-dark);
 }
 
 .ph-header__logo {
@@ -36,11 +62,11 @@
 }
 
 .ph-header__logo-light {
-    color: #000;
+    color: var(--black-color);
 }
 
 .ph-header__logo-dark {
-    color: #fff;
+    color: var(--white-color);
 }
 
 .ph__wrapper {
@@ -55,8 +81,8 @@
     font-weight: 600;
     border: 1px solid transparent;
     border-radius: 5px;
-    color: #fff;
-    background-color: #006080;
+    color: var(--white-color);
+    background-color: var(--nav-link);
     transition: all 0.5s ease-in-out;
 }
 
@@ -68,20 +94,20 @@
 }
 
 .nav-link {
-    color: #006080;
+    color: var(--nav-link);
 }
 
 .nav-link-dark {
-    color: #8282a7;
+    color: var(--nav-link-dark);
 }
 
 .nav-link-active-light {
     font-weight: 700;
-    color: #000e32;
+    color: var(--nav-link-active-light);
 }
 
 .nav-link-active-dark {
-    color: #fff;
+    color: var(--white-color);
 }
 
 .ph__cart {
@@ -90,14 +116,14 @@
     font-weight: 600;
     border: 1px solid transparent;
     border-radius: 5px;
-    color: #fff;
-    background-color: #df0b0b;
+    color: var(--white-color);
+    background-color: var(--ph__cart-bg);
 }
 
 .ph__cart-active {
     font-weight: bold;
-    background-color: #a30202;
-    color: #fff;
+    background-color: var(--ph__cart-active-bg);
+    color: var(--white-color);
 }
 /* Header // */
 
@@ -157,8 +183,8 @@
     font-weight: 600;
     border: 1px solid transparent;
     border-radius: 5px;
-    color: #fff;
-    background-color: #00806f;
+    color: var(--white-color);
+    background-color: var(--home-btn);
 }
 /* Home About Products // */
 
@@ -179,7 +205,7 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--product-card-border);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -225,12 +251,12 @@
 }
 
 .product__cancel-btn:hover svg {
-    color: #d32f2f;
+    color: var(--cancel-btn-hover);
 }
 
 .product__price {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: var(--product-price-bg);
+    color: var(--white-color);
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 16px;
@@ -238,7 +264,7 @@
 }
 
 .product__price:hover {
-    background-color: #388e3c;
+    background-color: var(--product-price-hover);
 }
 /* Products // */
 
@@ -264,7 +290,7 @@
 
 .ct__thead,
 .ct__cell {
-    border: 1px solid #ddd;
+    border: 1px solid var(--light-gray-color);
     padding: 10px;
     text-align: center;
     font-size: 18px;
@@ -272,15 +298,15 @@
 
 .ct__header {
     padding: 10px 20px;
-    background-color: #a92323;
-    color: #fff;
+    background-color: var(--ct-header-bg);
+    color: var(--white-color);
     font-size: 24px;
 }
 
 .ct__tbody,
 .ct__cell {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
 
 .ct__tfoot {
@@ -315,16 +341,16 @@
 .cart__form input {
     width: 300px;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--light-gray-color);
     border-radius: 5px;
-    background-color: #fff;
+    background-color: var(--white-color);
 }
 
 .cart__btn {
     margin-top: 15px;
     padding: 10px 30px;
-    background-color: #2e7d32;
-    color: white;
+    background-color: var(--cart-btn-bg);
+    color: var(--white-color);
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -332,5 +358,5 @@
 }
 
 .cart__btn:hover {
-    background-color: #1b5e20;
+    background-color: var(--cart-btn-hover);
 }

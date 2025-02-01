@@ -1,19 +1,21 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import CartTable from '../components/CartTable';
 import { Product } from '../types/types';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateIsCartEmpty } from '../store/productsSlice';
+import { RootState } from '../store';
 
 interface CartProps {
     items: Product[];
 }
 
 const Cart: FC<CartProps> = ({ items }) => {
-    const [isCartEmpty, setIsCartEmpty] = useState(!items.find((item) => item.quantity > 0));
+    const dispatch = useDispatch();
+    const isCartEmpty = useSelector((state: RootState) => state.products.isCartEmpty);
 
     useEffect(() => {
-        setIsCartEmpty(!items.find((item) => item.quantity > 0));
-    }, [items]);
-
-    console.log('isCartEmpty', isCartEmpty);
+        dispatch(updateIsCartEmpty());
+    }, [items, dispatch]);
 
     return (
         <div className="cart">

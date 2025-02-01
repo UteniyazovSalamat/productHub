@@ -41,7 +41,7 @@ export const navLinks = [
     { path: '/products', name: 'Products' },
 ];
 
-export const updateThemeByTime = () => {
+export const updateThemeByTime = (): boolean => {
     const currentHour = new Date().getHours();
     return currentHour >= 6 && currentHour < 18;
 };
