@@ -1,12 +1,12 @@
 import { FC, useEffect } from 'react';
 import CartTable from '../components/CartTable';
-import { Product } from '../types/types';
+import { IProduct } from '../types/types';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateIsCartEmpty } from '../store/productsSlice';
 import { RootState } from '../store';
 
 interface CartProps {
-    items: Product[];
+    items: IProduct[];
 }
 
 const Cart: FC<CartProps> = ({ items }) => {

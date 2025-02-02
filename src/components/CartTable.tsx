@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { Product } from '../types/types';
+import { IProduct } from '../types/types';
 
 interface CartTableProps {
-    items: Product[];
+    items: IProduct[];
 }
 
 const CartTable: FC<CartTableProps> = ({ items }) => {

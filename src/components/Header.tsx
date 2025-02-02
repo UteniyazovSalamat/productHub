@@ -3,10 +3,10 @@ import Navigation from './Navigation';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { toggleTheme } from '../store/productsSlice';
-import { Product } from '../types/types';
+import { IProduct } from '../types/types';
 
 interface HeaderProps {
-    items: Product[];
+    items: IProduct[];
     theme: boolean;
 }
 

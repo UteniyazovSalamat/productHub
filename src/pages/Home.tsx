@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Home = () => {
     return (
         <div className="home">
@@ -15,7 +17,9 @@ const Home = () => {
                     alt="img"
                 />
             </div>
-            <button className="home__btn">Start shopping</button>
+            <Link to="/products" className="home__btn">
+                Start shopping
+            </Link>
         </div>
     );
 };

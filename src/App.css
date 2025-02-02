@@ -111,6 +111,7 @@
 }
 
 .ph__cart {
+    width: 90px;
     padding: 7px 12px;
     font-size: 18px;
     font-weight: 600;
@@ -118,6 +119,12 @@
     border-radius: 5px;
     color: var(--white-color);
     background-color: var(--ph__cart-bg);
+    text-align: center;
+}
+
+.ph__cart-count {
+    min-width: 30px;
+    text-align: center;
 }
 
 .ph__cart-active {

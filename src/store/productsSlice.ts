@@ -1,19 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Product } from '../types/types';
+import { IProduct } from '../types/types';
 import { products, updateThemeByTime } from '../utils/dataUtils';
 
 interface ProductsState {
-    items: Product[];
+    items: IProduct[];
     theme: boolean;
     isCartEmpty: boolean;
 }
 
-const items = JSON.parse(localStorage.getItem('items') ?? '') || products;
+const items = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items') ?? '') : products;
 
 const initialState: ProductsState = {
     items,
     theme: updateThemeByTime(),
-    isCartEmpty: !items.find((item: Product) => item.quantity > 0),
+    isCartEmpty: !items.find((item: IProduct) => item.quantity > 0),
 };
 
 const productsSlice = createSlice({
