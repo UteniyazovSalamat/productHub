@@ -14,6 +14,8 @@ function App() {
     const items = useSelector((state: RootState) => state.products.items);
     const theme = useSelector((state: RootState) => state.products.theme);
 
+    console.log('hello');
+
     useEffect(() => {
         localStorage.setItem('items', JSON.stringify(items));
     }, [items]);
